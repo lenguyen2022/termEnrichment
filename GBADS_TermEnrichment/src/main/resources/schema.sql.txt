@@ -1,0 +1,19 @@
+CREATE TABLE term( 
+	term_id BIGINT NOT NULL AUTO_INCREMENT, 
+	species VARCHAR(45) NOT NULL,
+	country VARCHAR(45),
+	t_year VARCHAR(10),
+	PRIMARY KEY(term_id),
+	UNIQUE(term_id),
+);
+
+CREATE TABLE enriched_term( 
+	enriched_term_id BIGINT NOT NULL AUTO_INCREMENT, 
+	species VARCHAR(45) NOT NULL,
+	term_id BIGINT NOT NULL,
+	PRIMARY KEY(enriched_term_id),
+	FOREIGN KEY (term_id) REFERENCES term(term_id)
+);
+
+
+
