@@ -31,7 +31,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * This class provides the Rest API
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("${api.basePath}")
 public class SpeciesTermController {
 	@Autowired
 	DatabaseAccess da;
